@@ -18,13 +18,12 @@ class App extends Component {
     }
   }
 
-  addFood = (name,calories,image,quantity) => {
+  addFood = (name,calories,quantity,image) => {
     const newFood = {name: name, calories: calories, image: image, quantity: quantity};
     this.state.foodList.push(newFood);
-    console.log(this.state.foodList)
     this.setState({
       foodList:this.state.foodList
-    })
+    });
   }
 
   searchFood = (searchInput) => {
